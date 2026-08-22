@@ -1,0 +1,3 @@
+{"messages":[{"role":"user","content":"Write a Python function that returns the square of a number."},{"role":"assistant","content":"```python\ndef square(x):\n    return x * x\n```"}]}
+{"messages":[{"role":"user","content":"Refactor this Python loop using a list comprehension: result=[]; for x in nums: result.append(x*2)"},{"role":"assistant","content":"```python\nresult = [x * 2 for x in nums]\n```"}]}
+{"messages":[{"role":"user","content":"What is wrong with this Python function? def divide(a, b): return a / b"},{"role":"assistant","content":"It does not handle division by zero. A safer version is:\n```python\ndef divide(a, b):\n    if b == 0:\n        raise ValueError(\"b must not be zero\")\n    return a / b\n```"}]}

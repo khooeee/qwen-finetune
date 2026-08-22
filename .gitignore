@@ -1,0 +1,6 @@
+# pixi environments
+.pixi/*
+adapters/
+outputs/
+unsloth_compiled_cache/
+!.pixi/config.toml
