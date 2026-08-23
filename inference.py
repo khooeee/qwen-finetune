@@ -1,6 +1,4 @@
-import torch
 from unsloth import FastModel
-
 
 model, tokenizer = FastModel.from_pretrained(
     model_name="adapters/qwen3-14b",
@@ -11,12 +9,7 @@ model, tokenizer = FastModel.from_pretrained(
 FastModel.for_inference(model)
 
 
-messages = [
-    {
-        "role": "user",
-        "content": "Write a safe Python divide function."
-    }
-]
+messages = [{"role": "user", "content": "Write a safe Python divide function."}]
 
 
 text = tokenizer.apply_chat_template(
@@ -43,7 +36,7 @@ outputs = model.generate(
 )
 
 
-generated = outputs[0][inputs.input_ids.shape[1]:]
+generated = outputs[0][inputs.input_ids.shape[1] :]
 
 print(
     tokenizer.decode(
