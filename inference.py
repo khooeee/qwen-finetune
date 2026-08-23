@@ -8,6 +8,10 @@ model, tokenizer = FastModel.from_pretrained(
 
 FastModel.for_inference(model)
 
+# Qwen3 ships max_length=40960 in generation_config; clear it so
+# max_new_tokens is the only limit and transformers does not warn.
+model.generation_config.max_length = None
+
 
 messages = [{"role": "user", "content": "Write a safe Python divide function."}]
 

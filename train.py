@@ -10,7 +10,6 @@ MAX_LENGTH = 2048
 # Change this to False once the pipeline works.
 SMOKE_TEST = True
 
-
 print("Loading model...")
 
 model, tokenizer = FastModel.from_pretrained(
