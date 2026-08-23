@@ -7,5 +7,9 @@
       "source.fixAll.ruff": "explicit",
       "source.organizeImports.ruff": "explicit"
     }
-  }
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.pixi/envs/default/bin/python",
+  "cursorpyright.analysis.extraPaths": [
+    "${workspaceFolder}/.pixi/envs/default/lib/python3.13/site-packages"
+  ]
 }
