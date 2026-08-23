@@ -1,8 +1,9 @@
 # Unsloth must be imported before trl / transformers / peft.
+from unsloth import FastModel
+
 import torch
 from datasets import load_dataset
 from trl import SFTConfig, SFTTrainer
-from unsloth import FastModel
 
 MODEL_NAME = "unsloth/Qwen3-14B-bnb-4bit"
 MAX_LENGTH = 2048

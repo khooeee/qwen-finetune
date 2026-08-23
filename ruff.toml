@@ -1,0 +1,13 @@
+# Unsloth patches trl / transformers / peft on import, so it must come first.
+[lint.isort]
+section-order = [
+    "future",
+    "standard-library",
+    "unsloth",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[lint.isort.sections]
+unsloth = ["unsloth"]
