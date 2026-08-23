@@ -5,21 +5,25 @@ platforms = [
     { platform = "linux-64", cuda = "13.0" },
 ]
 
+[tasks]
+train = "python train.py"
+inference = "python inference.py"
+
 [dependencies]
 python = "3.13.*"
 git = "*"
 
 [pypi-dependencies]
-torch = {
-    version = "==2.12.1",
-    index = "https://download.pytorch.org/whl/cu130"
-}
-torchvision = {
-    version = "==0.27.1",
-    index = "https://download.pytorch.org/whl/cu130"
-}
 unsloth = "*"
 datasets = "*"
 trl = "*"
 accelerate = "*"
 huggingface-hub = "*"
+
+[pypi-dependencies.torch]
+version = "==2.12.1"
+index = "https://download.pytorch.org/whl/cu130"
+
+[pypi-dependencies.torchvision]
+version = "==0.27.1"
+index = "https://download.pytorch.org/whl/cu130"

@@ -2,9 +2,8 @@
 
 ```sh
 pixi install
-pixi run python train.py
-
-pixi run python inference.py
+pixi run train
+pixi run inference
 ```
 
 Target roughly:
